@@ -9,7 +9,7 @@
 			echo $stmt->fetch(PDO::FETCH_ASSOC)['batch_id'];
 		}
 		catch(ErrorException $e){
-			echo $e->POSTMessage();
+			echo $e->getMessage();
 		}
 
 	}

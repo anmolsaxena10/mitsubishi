@@ -1,7 +1,7 @@
 <?php
 	require_once('connection.php');
 
-	$sql = "WITH t AS (SELECT * FROM logs WHERE batch_id=? ORDER BY time DESC LIMIT 5) SELECT * from t ORDER BY time ASC;";
+	$sql = "WITH t AS (SELECT * FROM logs WHERE batch_id=? ORDER BY time DESC LIMIT 8) SELECT * from t ORDER BY time ASC;";
 	$query = $database_handler->prepare($sql);
 	$query->execute(array($_GET['batch_id']));
 

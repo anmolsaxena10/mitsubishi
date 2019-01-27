@@ -42,11 +42,12 @@ include("header.php");
 	?>
 	<script>
 		$('#details').click(function(){
+			window.clearInterval(x);
 			$.get("details.php?batch_id="+$("#batch_id").val(), function(data){
 				$('#batch_details').html(data);
 				$('#label').css("display", "block");
 			});
-			setInterval(function () {
+			var x = setInterval(function () {
 				$.get("details.php?batch_id="+$("#batch_id").val(), function(data){
 					$('#batch_details').html(data);
 					$('#label').css("display", "block");

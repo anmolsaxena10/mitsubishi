@@ -11,7 +11,7 @@
 		catch(ErrorException $e){
 			echo $e->getMessage();
 		}
-
+		echo "asdsad";
 	}
 	else{
 		echo"failed";
